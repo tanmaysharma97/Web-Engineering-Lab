@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+			var d = new Date();
+			document.getElementById("demo").innerHTML = d;
+		</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Form-Contact </title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div>
+      <p id="demo"></p>
+    </div>
+    <br><br><br>
+
+      <center style="vertical-align: center;">
+        <br>
+        <b><h1 style="color: blue;">Contact info</h1></b>
+        <form name="myForm" class="form" action="conf.jsp" method="post">
+          <div class="form-group">
+            First Name: <input type="text" name="firstname" id="firstname" class="form-control" placeholder="First Name">
+            <br> <br>
+          </div>
+          <div class="form-group">
+            Last Name: <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Last Name">
+            <br> <br>
+          </div>
+          <div class="form-group">
+          Email id:  <input type="Email" name="email" id="email" class="form-control" placeholder=" Email Id">
+          <br> <br>
+          </div>
+          <div class="form-group">
+            <br> Gender:
+            <select name="gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+          <br>
+          <br>
+          </div>
+
+
+          <div class="form-group">
+          Contact Number:  <input type="text" name="contact" id="contact" class="form-control" placeholder=" Contact">
+          </div>
+          <center><button type="submit" class="btn btn-primary" name="submit">Submit</button></center>
+        </form>
+
+      </center>
+    <footer style="position: absolute; bottom: 0;  width: 100%;">
+      <div>
+        <center>
+          <p>
+            Copyright © TS. All Rights Reserved <br> Contact Us: <a href="tel:+91 9013839374">+91 9013839374</a><br>Designed & Developed by <a href="mailto:tanmay.sharma97.ts@gmail.com">ts</a>
+          </p>
+        </center>
+      </div>
+    </footer>
+    <script>
+    function validateForm() {
+    var x = document.forms["myForm"]["firstname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+
+    var stre = document.forms["myForm"]["email"].value;
+    if (!(stre.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))) {
+          alert("Invalid email-id");
+         return false;
+      }
+
+    </script>
+  </body>
+</html>
